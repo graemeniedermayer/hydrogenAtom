@@ -2,7 +2,7 @@ importScripts('https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.1/math.js')
 let cartesianToSpherical = (x,y,z) => {
     let r = Math.sqrt(x**2+y**2+z**2)
     let theta = Math.atan2(y,x)
-    let phi = Math.acos(z, r)
+    let phi = Math.acos(z/ r)
     return [r, theta, phi]
 }
 let sphereToCartesian = ( r, theta, phi) => {
